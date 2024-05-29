@@ -1,0 +1,44 @@
+package com.qa.opencart.test;
+
+import org.testng.Assert;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+import com.qa.opencart.base.BaseTest;
+import com.qa.opencart.factory.DriverFactory;
+
+public class LoginPageTest extends BaseTest {
+	
+	
+	@Test
+	public void loginPageTitleTest() {
+		String actTitle = loginPage.getLoginPageTitle();
+		Assert.assertEquals(actTitle, "Account Login");
+	}
+	
+	@Test
+	public void loginPageURLTest() {
+		String actURL = loginPage.getLoginPageURL();
+		Assert.assertTrue(actURL.contains("route=account/login"));
+	}
+	
+	@Test
+	public void forgotPwdLinkExistTest() {
+		Assert.assertTrue(loginPage.isforgotPwdLinkExist());
+	}
+	
+	@Test
+	public void loginTest() {
+	loginPage.doLogin("dec23@gmail.com", "Dec@123");
+	
+		
+	}
+	@Test
+	public void logingTest() {
+		loginPage.doLogin("decsession32@gmail.com", "Dec@1234");
+		
+	}
+	
+	
+
+}

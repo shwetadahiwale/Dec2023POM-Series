@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete 9 resources" deleteContents="true" description="Delete 9 resources" element1="/PamirAppCommons" element2="/PamirAppRoot" element3="/pamir-data" element4="/PamirEsigiLop" element5="/PamirQuickLop" element6="/sosfoJava" element7="/sosfoRoot" element8="/sosfoWeb" element9="/sosJava" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="9" stamp="1716203953837"/>
+</session>

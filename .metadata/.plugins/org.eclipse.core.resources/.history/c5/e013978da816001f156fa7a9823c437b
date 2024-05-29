@@ -1,0 +1,32 @@
+package com.qa.opencart.factory;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+import com.qa.opencart.Exceptions.BrowserException;
+
+public class DriverFactory {
+	WebDriver driver;
+	
+	public void initDriver(String browserName) {
+		System.out.println("BrowserName is :" + browserName );
+		
+		switch(browserName.trim().toLowerCase()) {
+		case "chrome" :
+			driver = new ChromeDriver();
+			break;
+		case "firefox" :
+			driver = new FirefoxDriver();
+			break;
+		case "edge" :
+			driver = new EdgeDriver();
+			break;
+			default :
+				System.out.println("plz pass correct browser" + browserName);
+				throw new BrowserException("no Browser found " + browserName);
+				
+		}
+	}
+}

@@ -1,0 +1,16 @@
+package com.qa.opencart.pages;
+
+import org.openqa.selenium.By;
+
+public class LoginPage {
+	
+	//1.private By locators
+	private By emailId = By.id("input-email");
+	private By passWord = By.id("input-password");
+	
+	//public page class constructor
+	//public page actions
+	
+	
+
+}
